@@ -1,38 +1,150 @@
 .App {
+  width: 100vw;
+  height: 100vh;
+  background: skyblue;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 700px;
+  background: #fff;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.main .main_header {
+  height: 85px;
+  display: flex;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.main .main_header h5 {
+  margin-right: 10px;
+}
+
+.main .main_header select {
+  width: 90px;
+  height: 25px;
+}
+
+.main .main_section {
+  height: 615px;
+  background: #fff;
+  overflow-y: scroll;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main .main_city {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main_nav {
+  position: sticky;
+  width: 100%;
+  height: 80px;
+  /* bottom: -80px; */
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main_nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 14px;
+}
+
+.main_nav div.active {
+  /* background: rgba(255, 255, 255, 0.7); */
+  color: mediumslateblue;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dustData {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 350px;
+  height: 160px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  /* color: #fff; */
+  /* text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.7); */
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.dustData .dustHeader {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dustData .dustHeader h3 {
+  margin-right: auto;
+}
+
+.dustData .dustLevel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  width: 160px;
+  height: 60px;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.dustData h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.dustData h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.dustData span {
+  font-size: 12px;
 }
